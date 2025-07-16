@@ -1,16 +1,13 @@
+const spanEl = document.querySelector('.color');
+const btnEl = document.querySelector('.change-color');
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
     .padStart(6, 0)}`;
-};
+}
 
-const button = document.querySelector('.change-color');
-const colorSpan = document.querySelector('.color');
-
-button.addEventListener('click', () => {
-    const randomColor = getRandomHexColor();
-    
-    document.body.style.backgroundColor = randomColor;
-
-    colorSpan.textContent = randomColor;
+btnEl.addEventListener('click', () => {
+  const newColor = getRandomHexColor();
+  document.body.style.backgroundColor = newColor;
+  spanEl.textContent = newColor;
 });
