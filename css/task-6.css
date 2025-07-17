@@ -44,7 +44,19 @@ input::-webkit-inner-spin-button {
   line-height: 24px;
   cursor: pointer;
   margin-top: 16px;
+  transition: background-color 0.3s ease;
 }
+
+#controls button:hover {
+  background-color: #6C8CFF;
+}
+
+/* Kırmızı buton (3. eleman) */
 #controls :nth-child(3) {
-  background-color: #ff4e4e;
+  background-color: #FF4E4E;
+  transition: background-color 0.3s ease;
+}
+
+#controls :nth-child(3):hover {
+  background-color: #FF7070;
 }
